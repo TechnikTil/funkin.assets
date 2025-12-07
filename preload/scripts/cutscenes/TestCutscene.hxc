@@ -1,0 +1,44 @@
+import funkin.play.cutscene.SkippableCutscene;
+import flixel.FlxSprite;
+import funkin.Paths;
+
+class TestCutscene extends SkippableCutscene
+{
+  var testSprite:FlxSprite;
+
+  public function onCreate(event:ScriptEvent):Void
+  {
+    testSprite = new FlxSprite();
+    testSprite.loadGraphic(Paths.image('newgrounds_logo'));
+    testSprite.screenCenter();
+    this.add(testSprite);
+
+    this.addTimer(2, () -> {
+      testSprite.x += 100;
+    });
+
+    this.addTimer(4, () -> {
+      testSprite.x -= 100;
+    });
+
+    this.addTimer(6, () -> {
+      testSprite.x -= 100;
+    });
+
+    this.addTimer(8, () -> {
+      testSprite.x += 100;
+    });
+
+    this.addTimer(10, () -> {
+      this.finish();
+    });
+
+    this.setupCutsceneMusic("freeplayRandom");
+  }
+
+  public function onBeatHit(event:SongTimeScriptEvent):Void
+  {
+    testSprite.scale.x += 0.05;
+    testSprite.scale.y += 0.05;
+  }
+}
