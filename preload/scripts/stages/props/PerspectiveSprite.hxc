@@ -79,11 +79,11 @@ class PerspectiveSprite extends FlxTypedSpriteGroup
     if (targetCam == null) targetCam = FlxG.camera;
 
     // correct for scrollfactors..
-    // var correctedBottom:FlxPoint = new FlxPoint(bottomObj.x, bottomObj.y).add(targetCam.scroll.x * (sprite.scrollFactor.x - bottomObj.scrollFactor.x), targetCam.scroll.y * (sprite.scrollFactor.y - bottomObj.scrollFactor.y));
-    // var correctedTop:FlxPoint = new FlxPoint(topObj.x, topObj.y).add(targetCam.scroll.x * (sprite.scrollFactor.x - topObj.scrollFactor.x), targetCam.scroll.y * (sprite.scrollFactor.y - topObj.scrollFactor.y));
-    var correctedBottom:FlxPoint = new FlxPoint(bottomObj.x + (targetCam.scroll.x * (sprite.scrollFactor.x - bottomObj.scrollFactor.x)),
+    // var correctedBottom:FlxPoint = FlxPoint.weak(bottomObj.x, bottomObj.y).add(targetCam.scroll.x * (sprite.scrollFactor.x - bottomObj.scrollFactor.x), targetCam.scroll.y * (sprite.scrollFactor.y - bottomObj.scrollFactor.y));
+    // var correctedTop:FlxPoint = FlxPoint.weak(topObj.x, topObj.y).add(targetCam.scroll.x * (sprite.scrollFactor.x - topObj.scrollFactor.x), targetCam.scroll.y * (sprite.scrollFactor.y - topObj.scrollFactor.y));
+    var correctedBottom:FlxPoint = FlxPoint.weak(bottomObj.x + (targetCam.scroll.x * (sprite.scrollFactor.x - bottomObj.scrollFactor.x)),
       bottomObj.y + (targetCam.scroll.y * (sprite.scrollFactor.y - bottomObj.scrollFactor.y)));
-    var correctedTop:FlxPoint = new FlxPoint(topObj.x + (targetCam.scroll.x * (sprite.scrollFactor.x - topObj.scrollFactor.x)),
+    var correctedTop:FlxPoint = FlxPoint.weak(topObj.x + (targetCam.scroll.x * (sprite.scrollFactor.x - topObj.scrollFactor.x)),
       topObj.y + (targetCam.scroll.y * (sprite.scrollFactor.y - topObj.scrollFactor.y)));
     if (debugDraw)
     {
@@ -105,6 +105,9 @@ class PerspectiveSprite extends FlxTypedSpriteGroup
     // move sprite to be aligned to the bottom object
     sprite.x = correctedBottom.x - sprite.width / 2;
     sprite.y = correctedBottom.y - sprite.height;
+
+    correctedBottom.put();
+    correctedTop.put();
   }
 
   override public function isOnScreen(camera:FlxCamera):Bool
