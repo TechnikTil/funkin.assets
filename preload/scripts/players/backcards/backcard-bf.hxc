@@ -4,7 +4,8 @@ import funkin.ui.freeplay.backcards.BackingCard;
 import flixel.FlxSprite;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
-import flixel.util.FlxSpriteUtil;
+import animate.internal.filters.MaskShader;
+import openfl.geom.Rectangle;
 import funkin.ui.freeplay.charselect.PlayableCharacter;
 import funkin.data.freeplay.player.PlayerRegistry;
 import funkin.Conductor;
@@ -91,7 +92,7 @@ class BoyfriendCard extends BackingCard
 
     add(alsoOrangeLOL);
 
-    FlxSpriteUtil.alphaMaskFlxSprite(orangeBackShit, pinkBack, orangeBackShit);
+    MaskShader.maskAlpha(orangeBackShit.pixels, pinkBack.pixels, new Rectangle());
     orangeBackShit.visible = false;
     alsoOrangeLOL.visible = false;
 
