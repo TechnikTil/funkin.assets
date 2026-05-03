@@ -8,7 +8,7 @@
     #menubarOpenRecent {
       width: auto;
       initial-width: none;
-      min-width: 160px;
+      min-width: 160px;metadata
       max-width: 800px;
     }
   </style>

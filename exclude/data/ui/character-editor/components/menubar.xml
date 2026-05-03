@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menubar id="menubar" width="100%" paddingLeft="256">
+  <style>
+    .menu {
+    // The width of the individual menu items
+    width: 160px;
+    }
+    #menubarOpenRecent {
+      width: auto;
+      initial-width: none;
+      min-width: 160px;
+      max-width: 800px;
+    }
+  </style>
+  <menu text="File">
+    <menu-item id="menubarItemNewChar" text="New Character" shortcutText="Ctrl+N" />
+    <menu-separator />
+    <menu-item id="menubarItemOpenChar" text="Open Character..." shortcutText="Ctrl+O" />
+    <menu id="menubarOpenRecent" text="Open Recent" />
+    <menu-separator />
+    <menu-item id="menubarItemSaveChar" text="Save Character" shortcutText="Ctrl+S" />
+    <menu-item id="menubarItemSaveCharAs" text="Save Character As..." shortcutText="Ctrl+Shift+S" />
+    <menu-separator />
+    <menu-item id="menubarItemExit" text="Exit" shortcutText="Ctrl+Q" />
+  </menu>
+  <menu text="Edit" width="208px;">
+    <menu text="Offset Type">
+      <menu-option-box id="menuBarItemGlobalOffset" text="Global Offsets" group="menubarItemOffsetGroup" />
+      <menu-option-box id="menuBarItemAnimOffset" text="Animation Offsets" group="menubarItemOffsetGroup" />
+    </menu>
+    <menu-separator />
+    <menu-item id="menubarItemUndo" text="Undo" shortcutText="Ctrl+Z" />
+    <menu-item id="menubarItemRedo" text="Redo" shortcutText="Ctrl+Y" />
+    <menu-separator />
+    <menu-item id="menubarItemCopyOffset" text="Copy Offset" shortcutText="Ctrl+C" />
+    <menu-item id="menubarItemPasteOffset" text="Paste Offset" shortcutText="Ctrl+V" />
+    <menu-item id="menubarItemDeleteOffset" text="Clear Offset" shortcutText="Delete" />
+  </menu>
+  <menu text="View">
+    <menu text="Theme">
+      <menu-option-box id="menuBarItemThemeLight" text="Light" group="menubarItemThemeGroup" />
+      <menu-option-box id="menuBarItemThemeDark" text="Dark" group="menubarItemThemeGroup" />
+    </menu>
+    <menu-separator />
+    <menu-checkbox width="100%" id="menubarItemOnionSkin" text="Onion Skin" tooltip="Enable onion skin." />
+  </menu>
+  <menu text="Audio">
+    <menu-checkbox width="100%" id="menubarItemThemeMusic" text="Play Theme Music" />
+  </menu>
+  <menu text="Window">
+    <vbox width="100%">
+    <menu-checkbox width="100%" id="menubarItemToggleToolboxMetadata" text="Metadata" />
+    <menu-checkbox width="100%" id="menubarItemToggleToolboxAnims" text="Animations" />
+    <menu-checkbox width="100%" id="menubarItemToggleToolboxHealth" text="Health Icon" />
+    <menu-checkbox width="100%" id="menubarItemToggleToolboxStage" text="Stage Preview" />
+    </vbox>
+  </menu>
+  <menu text="Help">
+    <menu-item id="menubarItemWelcomeDialog" text="Welcome Dialog" />
+    <menu-item id="menubarItemUserGuide" text="User Guide" shortcutText="F1" />
+    <menu-item id="menubarItemGoToBackupsFolder" text="Go to Backups Folder" />
+    <menu-item id="menubarItemAbout" text="About..." />
+  </menu>
+  <spacer width="100%" />
+  <label text="PROTOTYPE Functionality is subject to change." verticalAlign="center" />
+</menubar>
