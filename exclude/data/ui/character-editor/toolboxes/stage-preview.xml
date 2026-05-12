@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<collapsible-dialog id="toolboxStage" title="Stage Preview" width="360" style="minHeight:200">
+  <vbox width="100%">
+    <grid columns="2" width="100%">
+      <label text="Stage: " verticalAlign="center" />
+      <dropdown id="toolboxStageSelected" width="100%" dropdownSize="10" dropdownWidth="300" searchable="true" tooltip="The current stage shown.">
+        <data>
+          <item text="Checkerboard (None)" id="checkerboard" />
+          <item text="Main Stage" id="mainStage" />
+        </data>
+      </dropdown>
+    </grid>
+    <spacer />
+    <frame id="toolboxStagePropertiesFrame" text="Preview Properties" width="100%">
+      <grid columns="2" width="100%">
+        <label text="Character Position: " verticalAlign="center" />
+        <dropdown id="toolboxStageCharPos" width="100%" value="Opponent (Dad)" dropdownSize="10" tooltip="The position the current character should take on the preview.">
+          <data>
+            <item text="Dad (Opponent)" id="dad" />
+            <item text="BF (Player)" id="bf" />
+            <item text="Girlfriend" id="gf" />
+          </data>
+        </dropdown>
+        <label text="View Position Marker? " tooltip="Whether or not a circle indicating the floor position should be shown." />
+        <checkbox id="toolboxStagePosMarker" selected="false" />
+      </grid>
+    </frame>
+  </vbox>
+</collapsible-dialog>
