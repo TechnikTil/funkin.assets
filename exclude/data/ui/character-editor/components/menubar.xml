@@ -49,9 +49,9 @@
   </menu>
   <menu text="Window">
     <vbox width="100%">
-    <menu-checkbox width="100%" id="menubarItemToggleToolboxMetadata" text="Metadata" />
+    <menu-checkbox width="100%" id="menubarItemToggleToolboxData" text="Metadata" />
     <menu-checkbox width="100%" id="menubarItemToggleToolboxAnims" text="Animations" />
-    <menu-checkbox width="100%" id="menubarItemToggleToolboxHealth" text="Health Icon" />
+    <menu-checkbox width="100%" id="menubarItemToggleToolboxDeath" text="Death Properties" />
     <menu-checkbox width="100%" id="menubarItemToggleToolboxStage" text="Stage Preview" />
     </vbox>
   </menu>

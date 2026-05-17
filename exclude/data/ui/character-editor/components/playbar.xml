@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	This component imitates the playback controls like on a music player.
+-->
+<box id="playbar" width="100%" height="48" styleName="playbar">
+	<hbox horizontalAlign="left" verticalAlign="center">
+		<label id="playbarAnimName" text="idle" styleName="playbarStatus" tooltip="Current Animation Name. Click to Change." />
+		<rule direction="vertical" height="80%" />
+		<label id="playbarAnimOffsets" text="[0, 0]" styleName="playbarStatus" tooltip="Current Animation Offsets."/>
+	</hbox>
+	<hbox horizontalAlign="center">
+		<button allowFocus="false" styleName="playbarButton" tooltip="Skip to Start" id="playbarStart" text="|<" />
+		<button allowFocus="false" styleName="playbarButton" tooltip="Skip Back" id="playbarBack" text="<<" />
+		<button allowFocus="false" styleName="playbarButton" tooltip="Play/Pause" id="playbarPlay" text=">" />
+		<button allowFocus="false" styleName="playbarButton" tooltip="Skip Forward" id="playbarForward" text=">>" />
+		<button allowFocus="false" styleName="playbarButton" tooltip="Skip to End" id="playbarEnd" text=">|" />
+	</hbox>
+	<label horizontalAlign="right" verticalAlign="center" id="playbarGlobalOffsets" text="[0, 0]" styleName="playbarStatus" tooltip="Current Global Offsets" />
+</box>

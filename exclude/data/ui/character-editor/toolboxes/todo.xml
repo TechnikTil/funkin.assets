@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<collapsible-dialog id="todo" title="TODO" width="150" style="minHeight:100">
+  <label text="TODO" verticalAlign="center" horizontalAlign="center" />
+</collapsible-dialog>
