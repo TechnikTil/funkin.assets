@@ -42,7 +42,7 @@
       <menu-option-box id="menuBarItemThemeDark" text="Dark" group="menubarItemThemeGroup" />
     </menu>
     <menu-separator />
-    <menu-checkbox width="100%" id="menubarItemOnionSkin" text="Onion Skin" tooltip="Enable onion skin." />
+    <menu-checkbox width="100%" id="menubarItemOnionSkin" text="Onion Skin" shortcutText="F" tooltip="Enable onion skin." />
   </menu>
   <menu text="Audio">
     <menu-checkbox width="100%" id="menubarItemThemeMusic" text="Play Theme Music" />

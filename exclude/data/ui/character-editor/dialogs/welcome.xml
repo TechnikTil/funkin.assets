@@ -6,10 +6,10 @@
         <hbox width="100%" height="100%">
           <style>
             .bigAssButton {
-            font-size: 55px;
-            font-weight: bold;
-            width: 100%;
-            height: 100%;
+              font-size: 55px;
+              font-weight: bold;
+              width: 100%;
+              height: 100%;
             }
           </style>
           <button id="splashSparrowButton" text="Sparrow" styleNames="bigAssButton" />

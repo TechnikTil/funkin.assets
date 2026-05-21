@@ -3,5 +3,4 @@
 	<import source="components/menubar.xml" />
 	<spacer height="100%" />
 	<import source="components/playbar.xml" />
-	<import source="components/style.xml" />
 </vbox>
